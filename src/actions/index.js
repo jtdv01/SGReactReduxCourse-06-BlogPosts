@@ -13,3 +13,12 @@ export function fetchPosts(){
     payload: request
   };
 }
+
+export const CREATE_POST = 'CREATE_POST';
+export function createPost(props){
+  const request = axios.post(`${ROOT_URL}/posts${API_KEY}`);
+  return({
+    type: CREATE_POST,
+    payload: request
+  });
+}
